@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
+import Input from './input'
+import Button from './button'
+
 
 
 class MonthlyCost extends Component {
     state = { 
-        interest: 5.77
+       
      }
 
-    calculateMonthlyCost(amount, repaymentYears, interest) {
-        var months = repaymentYears * 12;
-    
-        return Math.round(amount * (interest / 100) / 12 / (1 - Math.pow(1 + (interest / 100) / 12, (months * -1))));
-    }
+   
     render() { 
         return ( 
-        <div class="monthly-cost">
-            <div class="monthly-cost-label">
+        <div>
+            <div>
                 {/* <!-- monthlyCostLabel --> */}
                 Månadskostnad
             </div>
-            <div class="monthly-cost-value">
+            <div>
                 {/* <!-- monthlyCost + monthlyCostSuffix --> */}
-                {this.calculateMonthlyCost}
+                {/* {this.calculateMonthlyCost} */}
         </div>
+        <Input/>
+        
+        
     </div> );
     }
 }
