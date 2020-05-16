@@ -21,7 +21,7 @@ class MonthlyCost extends Component {
                 {/* <!-- monthlyCost + monthlyCostSuffix --> */}
                 {/* {this.calculateMonthlyCost} */}
         </div>
-        <Input/>
+        
         
         
     </div> );
