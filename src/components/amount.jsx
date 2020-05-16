@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NumberFormat from 'react-number-format';
 
 class Amount extends Component {
     state = { 
@@ -20,7 +21,8 @@ class Amount extends Component {
                 </div>
                 <div className='lane'>
                     <button  onClick={this.handleDecrement}><span>-</span></button>
-                    <input type='number' value={this.state.totalAmount}></input>
+                    {/* <NumberFormat type='number' value={this.state.totalAmount}/> */}
+                    <NumberFormat value={this.state.totalAmount} thousandSeparator={true} suffix={' kr'}/>
                     <button  onClick={this.handleIncrement}><span>+</span></button>
                 </div>
             </div>

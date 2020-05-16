@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-import '../index.css';
+
 
 class MonthlyCost extends Component {
-    state = {  }
+    state = { 
+        interest: 5.77
+     }
+
+    calculateMonthlyCost(amount, repaymentYears, interest) {
+        var months = repaymentYears * 12;
+    
+        return Math.round(amount * (interest / 100) / 12 / (1 - Math.pow(1 + (interest / 100) / 12, (months * -1))));
+    }
     render() { 
         return ( 
         <div class="monthly-cost">
@@ -12,7 +20,7 @@ class MonthlyCost extends Component {
             </div>
             <div class="monthly-cost-value">
                 {/* <!-- monthlyCost + monthlyCostSuffix --> */}
-                2 173 kr
+                {this.calculateMonthlyCost}
         </div>
     </div> );
     }

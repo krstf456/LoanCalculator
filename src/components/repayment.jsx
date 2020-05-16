@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
+import '../index.css';
+import NumberFormat from 'react-number-format';
+
 
 class Repayment extends Component {
     
         
         state = { 
-            timeLine: 14
+            repaymentYears: 14
         }
 
     
 
     handleIncrement = () => {
-        this.setState({ timeLine: this.state.timeLine + 1 })
+       
+
+            this.setState({ repaymentYears: this.state.repaymentYears + 1 })
+        
     }
     handleDecrement = () => {
-        this.setState({ timeLine: this.state.timeLine - 1 })
+        this.setState({ repaymentYears: this.state.repaymentYears - 1 })
     }
     
     render() { 
@@ -24,7 +30,11 @@ class Repayment extends Component {
                 </div>
                 <div>
                     <button onClick={this.handleDecrement}><span>-</span></button>
-                    <input type="number" value={this.state.timeLine}/>
+                    
+
+                    {/* <input type="number" value={this.state.repaymentYears} id='years'/> */}
+                    <NumberFormat value={this.state.repaymentYears} suffix={' years'}/>
+
                     <button onClick={this.handleIncrement}><span>+</span></button>
                 </div>
             </div>

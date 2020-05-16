@@ -9,7 +9,7 @@ body {
 .monthly-cost {
   /* text-align: start; */
 }
-.ansok {
+/* .ansok {
   background-color: #42f5a4;
   width: 30%;
   height: 2.5rem;
@@ -17,8 +17,10 @@ body {
   color: white;
   text-align: start;
   cursor: pointer;
+} */
+#years::after {
+  content: 'years'
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

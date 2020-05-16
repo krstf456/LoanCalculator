@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../index.css';
+
 
 
 class Button extends Component {
@@ -7,7 +7,7 @@ class Button extends Component {
     render() { 
         return ( 
             <div>
-                <button className="ansok">Ansök nu</button>
+                <button className="ansok">Calculate</button>
             </div> );
     }
 }
