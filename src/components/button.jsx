@@ -22,7 +22,10 @@ class Button extends Component {
     render() { 
         return ( 
             <div>
+                <div>
                 {this.state.calculateResult}
+
+                </div>
                 <button className="ansok" onClick={this.calculateMonthlyCost}>Calculate</button>
             </div> );
     }

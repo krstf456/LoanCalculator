@@ -37,33 +37,33 @@ class Inputs extends Component {
     render() { 
         return (  
             <div className='value'>
-                <div className='beloppet'>
-                    Belopp
+                <div  className='repaymentTime'>
+                    Lånebelopp
                 </div>
                 <div className='lane'>
-                    <button  onClick={this.handleDecrementTotalAmount}><span>-</span></button>
+                    <button className='incDecButton' onClick={this.handleDecrementTotalAmount}><span>-</span></button>
                     {/* <NumberFormat type='number' value={this.state.totalAmount}/> */}
                     <NumberFormat 
-                    
+                    className='inputs'
                     value={this.state.totalAmount} 
                     thousandSeparator={true} 
                     suffix={' kr'} 
                     id={'loanAmount'}/>
-                    <button  onClick={this.handleIncrementTotalAmount}><span>+</span></button>
+                    <button className='incDecButton' onClick={this.handleIncrementTotalAmount}><span>+</span></button>
                 </div>
-                <div className='beloppet'>
-                    Years
+                <div className='repaymentTime'>
+                    Återbetalningstid
                 </div>
                 <div className='lane'>
-                    <button  onClick={this.handleDecrementTotalYears}><span>-</span></button>
+                    <button className='incDecButton' onClick={this.handleDecrementTotalYears}><span>-</span></button>
                     {/* <NumberFormat type='number' value={this.state.totalAmount}/> */}
                     <NumberFormat 
-                    
+                    className='inputs'
                     value={this.state.repaymentYears} 
                     thousandSeparator={false} 
                     suffix={' years'} 
                     id={'loanYears'}/>
-                    <button  onClick={this.handleIncrementTotalYears}><span>+</span></button>
+                    <button className='incDecButton' onClick={this.handleIncrementTotalYears}><span>+</span></button>
                     
                 </div>
                 <Button totalAmount={this.state.totalAmount} repaymentYears={this.state.repaymentYears}/>
