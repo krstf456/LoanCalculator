@@ -12,18 +12,19 @@ body {
 .value {
   display: inline-block;
 }
-.ansok {
-  display: inline-block;
+.calculator {
+  display: inline-flex;
   background-color: #61d5a7;
   width: 90%;
   height: 2.5rem;
   border-radius: 25px;
   color: white;
-  text-align: start;
+  
   cursor: pointer;
   border: none;
-  margin-top: 8px;
+  margin-top: 19px;
   outline: none;
+  justify-content: space-around;
 } 
 .rowTitles {
   text-align: start;
@@ -39,8 +40,16 @@ body {
   font-style: italic;
   letter-spacing: 2px;
 }
-.indicator {
-  
+
+.arrowIcon {
+  font-size: 25px;
+  margin-top: 2px;
+    
+}
+.calculate {
+  font-size: 14px;
+  margin: 6px 0 0 0;
+  font-style: italic;
 }
 .incDecButton {
   border-radius: 100%;
@@ -54,7 +63,7 @@ body {
   text-align: center;
   line-height: 50%;
   outline: none;
-  
+  cursor: pointer;
 }
 .inputs {
   height: 20px;

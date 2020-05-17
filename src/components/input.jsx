@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NumberFormat from 'react-number-format';
-import Button from './button'
 
+import { BsArrowRight } from 'react-icons/bs'
 class Inputs extends Component {
     state = { 
         repaymentYears: 14,
@@ -48,6 +48,7 @@ class Inputs extends Component {
     render() { 
         return (  
             <div className='value'>
+                
                 <div   className='rowTitles'>
                     Månadskostnad
                 </div>
@@ -84,7 +85,6 @@ class Inputs extends Component {
                     onClick={this.handleDecrementTotalYears}
                     disabled={(this.state.repaymentYears < 2)?true:false }
                     ><span>-</span></button>
-                    {/* <NumberFormat type='number' value={this.state.totalAmount}/> */}
                     <NumberFormat 
                     
                     className='inputs'
@@ -97,14 +97,13 @@ class Inputs extends Component {
                     onClick={this.handleIncrementTotalYears}
                     disabled={(this.state.repaymentYears < 15)?false: true}
 
-                    ><span className='indicator'>+</span></button>
+                    ><span>+</span></button>
                     
                 </div>
                 <div>
-                    <button className="ansok" onClick={this.calculateMonthlyCost}>Calculate</button>
+                    <button className="calculator" onClick={this.calculateMonthlyCost}><p className='calculate'>Räkna ut</p><BsArrowRight className='arrowIcon'/></button>
 
                 </div>
-                {/* <Button totalAmount={this.state.totalAmount} repaymentYears={this.state.repaymentYears}/> */}
             </div>
          )
     }}
